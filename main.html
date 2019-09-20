@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<fieldset style="width: 25%">
+    <input type="number" id="inp" style="font: large; text-align: right; margin: 15px;border-style: solid">
+    <button type="button" onclick="count()">Show number of days</button>
+
+    <h3 style="margin: 15px" id="dis"></h3>
+</fieldset>
+</body>
+<script>
+    function count() {
+        let m = parseInt(document.getElementById("inp").value);
+        switch (m) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("dis").innerText="Thang "+m+" co 31 ngay";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById("dis").innerText="Thang "+m+" co 30 ngay";
+                break;
+            case 2:
+                document.getElementById("dis").innerText="Thang "+m+" co 28 hoac 29 ngay";
+                break;
+            default:
+                alert("Khong co thang do trong 1 nam");
+        }
+    }
+</script>
+</html>
